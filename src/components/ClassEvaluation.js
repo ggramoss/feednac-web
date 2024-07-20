@@ -56,7 +56,7 @@ export default function ClassEvaluation() {
       const feedbackUrl = `${process.env.REACT_APP_FEEDNAC_API}/feedbacks`
         
       await axios.post(feedbackUrl, feedbackData);
-      navigate(`/student/${studentId}`, { state: { studentId } });
+      navigate(`/`, { state: { studentId } });
     } catch (error) {
       console.error('Erro ao enviar avaliação:', error);
     }
